@@ -7,12 +7,10 @@ class QuestionScreen extends StatefulWidget {
   const QuestionScreen({
     super.key,
     required this.onSelectedAnswer,
-    required this.finishAnswering,
     required this.questions,
   });
 
   final void Function(String answer) onSelectedAnswer;
-  final void Function() finishAnswering;
   final List<QuizQuestion> questions;
 
   @override
@@ -25,14 +23,10 @@ class _QuestionScreenState extends State<QuestionScreen> {
   var currentQuestionIndex = 0;
 
   void increamentQuestionIndex(String selectedAnswer) {
-    if (currentQuestionIndex < widget.questions.length - 1) {
-      setState(() {
-        widget.onSelectedAnswer(selectedAnswer);
-        currentQuestionIndex += 1;
-      });
-    } else {
-      widget.finishAnswering();
-    }
+    setState(() {
+      widget.onSelectedAnswer(selectedAnswer);
+      currentQuestionIndex += 1;
+    });
   }
 
   @override

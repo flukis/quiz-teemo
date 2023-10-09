@@ -54,15 +54,6 @@ final List<QuizQuestion> questions = [
         "Noxious Nuisance"
       ]),
   QuizQuestion(
-      "Teemo is known for his obsession with mushrooms. Which region in the League of Legends lore is Teemo associated with?",
-      [
-        "Demacia",
-        "Piltover",
-        "Bandle City", // Correct answer
-        "Ionia",
-        "Noxus"
-      ]),
-  QuizQuestion(
       "In the 'One for All' game mode, which allows multiple players to control the same champion on a team, what is a common and humorous strategy involving Teemo that players often use?",
       [
         "Building only tank items",
